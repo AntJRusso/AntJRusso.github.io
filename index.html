@@ -33,241 +33,58 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:920px;margin:0 auto;padding:28px 20px 80px;}
-
-  /* ---------- Title block (signature element) ---------- */
-  .titleblock{
-    background:var(--paper-sheet);
-    border:2px solid var(--ink);
-    margin-bottom:40px;
-    position:relative;
-  }
-  .titleblock::before{
-    content:"";
-    position:absolute; inset:6px;
-    border:1px solid var(--line);
-    pointer-events:none;
-  }
-  .tb-main{
-    padding:26px 28px 20px;
-  }
-  .tb-eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:2.5px;
-    color:var(--blue);
-    text-transform:uppercase;
-    margin:0 0 10px;
-  }
-  .tb-name{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:700;
-    font-size:clamp(28px,5vw,42px);
-    letter-spacing:1px;
-    margin:0 0 6px;
-    color:var(--ink);
-  }
-  .tb-role{
-    font-size:16px;
-    color:var(--ink-soft);
-    margin:0;
-    max-width:520px;
-    line-height:1.5;
-  }
-  .tb-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid var(--ink);
-  }
-  .tb-cell{
-    padding:10px 14px;
-    border-right:1px solid var(--line);
-    border-top:1px solid var(--line);
-  }
+  .titleblock{background:var(--paper-sheet);border:2px solid var(--ink);margin-bottom:40px;position:relative;}
+  .titleblock::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none;}
+  .tb-main{padding:26px 28px 20px;}
+  .tb-eyebrow{font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:2.5px;color:var(--blue);text-transform:uppercase;margin:0 0 10px;}
+  .tb-name{font-family:'IBM Plex Mono', monospace;font-weight:700;font-size:clamp(28px,5vw,42px);letter-spacing:1px;margin:0 0 6px;color:var(--ink);}
+  .tb-role{font-size:16px;color:var(--ink-soft);margin:0;max-width:520px;line-height:1.5;}
+  .tb-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);}
+  .tb-cell{padding:10px 14px;border-right:1px solid var(--line);border-top:1px solid var(--line);}
   .tb-cell:last-child{border-right:none;}
-  .tb-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:9px;
-    letter-spacing:1.5px;
-    color:var(--blue-dim);
-    text-transform:uppercase;
-    display:block;
-    margin-bottom:4px;
-  }
-  .tb-value{
-    font-size:13px;
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--ink);
-    word-break:break-word;
-  }
-  .tb-value a{color:var(--blue); text-decoration:none;}
+  .tb-label{font-family:'IBM Plex Mono', monospace;font-size:9px;letter-spacing:1.5px;color:var(--blue-dim);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .tb-value{font-size:13px;font-family:'IBM Plex Mono', monospace;color:var(--ink);word-break:break-word;}
+  .tb-value a{color:var(--blue);text-decoration:none;}
   .tb-value a:hover{text-decoration:underline;}
-
-  /* ---------- Section callouts ---------- */
   .section{margin-bottom:52px;}
-  .sec-head{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin-bottom:22px;
-  }
-  .sec-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:700;
-    font-size:13px;
-    color:var(--paper-sheet);
-    background:var(--blue);
-    padding:4px 10px;
-    letter-spacing:1px;
-  }
-  .sec-title{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:600;
-    font-size:15px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--ink);
-    margin:0;
-  }
-  .sec-line{
-    flex:1;
-    height:1px;
-    background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 10px);
-    align-self:center;
-  }
-
-  /* ---------- Project sheets ---------- */
-  .sheet{
-    background:var(--paper-sheet);
-    border:1px solid var(--ink);
-    margin-bottom:22px;
-    position:relative;
-    padding:22px 24px;
-  }
-  .sheet::before, .sheet::after{
-    content:"";
-    position:absolute;
-    width:9px; height:9px;
-    border:1px solid var(--blue-dim);
-    top:6px;
-  }
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;}
+  .sec-tag{font-family:'IBM Plex Mono', monospace;font-weight:700;font-size:13px;color:var(--paper-sheet);background:var(--blue);padding:4px 10px;letter-spacing:1px;}
+  .sec-title{font-family:'IBM Plex Mono', monospace;font-weight:600;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin:0;}
+  .sec-line{flex:1;height:1px;background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 10px);align-self:center;}
+  .sheet{background:var(--paper-sheet);border:1px solid var(--ink);margin-bottom:22px;position:relative;padding:22px 24px;}
+  .sheet::before, .sheet::after{content:"";position:absolute;width:9px;height:9px;border:1px solid var(--blue-dim);top:6px;}
   .sheet::before{left:6px;}
   .sheet::after{right:6px;}
-  .sheet-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:16px;
-    margin-bottom:10px;
-    flex-wrap:wrap;
-  }
-  .sheet-title{
-    font-size:19px;
-    font-weight:600;
-    margin:0;
-    color:var(--ink);
-  }
-  .rev-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--red);
-    border:1px solid var(--red);
-    padding:2px 8px;
-    white-space:nowrap;
-    letter-spacing:0.5px;
-  }
-  .sheet-meta{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--blue-dim);
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-  }
-  .sheet p.desc{
-    font-size:14.5px;
-    line-height:1.65;
-    color:var(--ink-soft);
-    margin:0 0 16px;
-    max-width:620px;
-  }
-  .tool-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-bottom:16px;
-  }
-  .tool{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:4px 9px;
-    color:var(--ink-soft);
-  }
-  .media-slot{
-    border:1.5px dashed var(--line);
-    background:var(--paper);
-    min-height:220px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    gap:6px;
-    color:var(--blue-dim);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    text-align:center;
-    padding:16px;
-  }
-  .media-slot span.big{font-size:22px;}
-  /* To use a real image: replace the .media-slot div with
-     <img src="images/yourfile.jpg" alt="..." style="width:100%;display:block;border:1px solid var(--line);"> */
+  .sheet-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px;flex-wrap:wrap;}
+  .sheet-title{font-size:19px;font-weight:600;margin:0;color:var(--ink);}
+  .rev-tag{font-family:'IBM Plex Mono', monospace;font-size:11px;color:var(--red);border:1px solid var(--red);padding:2px 8px;white-space:nowrap;letter-spacing:0.5px;}
+  .sheet-meta{font-family:'IBM Plex Mono', monospace;font-size:11px;color:var(--blue-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+  .sheet p.desc{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin:0 0 16px;max-width:620px;}
+  .tool-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .tool{font-family:'IBM Plex Mono', monospace;font-size:11px;background:var(--paper);border:1px solid var(--line);padding:4px 9px;color:var(--ink-soft);}
 
-  /* ---------- Coursework / skills strips ---------- */
-  .strip{
-    background:var(--paper-sheet);
-    border:1px solid var(--line);
-    padding:16px 20px;
-    margin-bottom:10px;
-    display:grid;
-    grid-template-columns:160px 1fr;
-    gap:14px;
-    align-items:start;
-  }
-  .strip-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:1px;
-    color:var(--blue);
-    text-transform:uppercase;
-  }
-  .strip-value{font-size:14px; color:var(--ink-soft); line-height:1.6;}
+  /* Media grid + slots */
+  .media-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;}
+  .media-grid.single{grid-template-columns:1fr;max-width:420px;}
+  .media-slot{border:1.5px dashed var(--line);background:var(--paper);min-height:150px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--blue-dim);font-family:'IBM Plex Mono', monospace;font-size:10.5px;text-align:center;padding:12px;}
+  .media-slot span.big{font-size:20px;}
+  .media-grid img, .media-grid video{width:100%;height:150px;object-fit:cover;display:block;border:1px solid var(--line);}
+  .media-grid.single img, .media-grid.single video{height:auto;object-fit:contain;}
+  /* To use a real image in a slot: replace that slot's <div class="media-slot">...</div> with
+     <img src="images/yourfile.jpg" alt="..."> -- the grid handles sizing automatically */
 
-  /* ---------- Footer ---------- */
-  footer{
-    margin-top:60px;
-    padding-top:18px;
-    border-top:1px solid var(--line);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--blue-dim);
-    letter-spacing:1px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:8px;
-  }
+  @media (max-width:640px){ .media-grid{grid-template-columns:1fr;} }
 
-  @media (max-width:640px){
-    .tb-grid{grid-template-columns:1fr 1fr;}
-    .strip{grid-template-columns:1fr;}
-  }
+  .strip{background:var(--paper-sheet);border:1px solid var(--line);padding:16px 20px;margin-bottom:10px;display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start;}
+  .strip-label{font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:1px;color:var(--blue);text-transform:uppercase;}
+  .strip-value{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+  footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);font-family:'IBM Plex Mono', monospace;font-size:11px;color:var(--blue-dim);letter-spacing:1px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  @media (max-width:640px){ .tb-grid{grid-template-columns:1fr 1fr;} .strip{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- TITLE BLOCK -->
   <div class="titleblock">
     <div class="tb-main">
       <p class="tb-eyebrow">Portfolio — Sheet 1 of 1</p>
@@ -275,26 +92,13 @@
       <p class="tb-role">Mechanical Engineering student at Messiah University. I design things in CAD, then go find out what I got wrong by actually building them.</p>
     </div>
     <div class="tb-grid">
-      <div class="tb-cell">
-        <span class="tb-label">School</span>
-        <span class="tb-value">Messiah University</span>
-      </div>
-      <div class="tb-cell">
-        <span class="tb-label">Program</span>
-        <span class="tb-value">B.S. Mech. Eng. — '28</span>
-      </div>
-      <div class="tb-cell">
-        <span class="tb-label">Contact</span>
-        <span class="tb-value"><a href="mailto:anthonyr456@icloud.com">anthonyr456@icloud.com</a></span>
-      </div>
-      <div class="tb-cell">
-        <span class="tb-label">LinkedIn</span>
-        <span class="tb-value"><a href="https://www.linkedin.com/in/anthony-russo-898363281/" target="_blank">/in/anthony-russo</a></span>
-      </div>
+      <div class="tb-cell"><span class="tb-label">School</span><span class="tb-value">Messiah University</span></div>
+      <div class="tb-cell"><span class="tb-label">Program</span><span class="tb-value">B.S. Mech. Eng. — '28</span></div>
+      <div class="tb-cell"><span class="tb-label">Contact</span><span class="tb-value"><a href="mailto:anthonyr456@icloud.com">anthonyr456@icloud.com</a></span></div>
+      <div class="tb-cell"><span class="tb-label">LinkedIn</span><span class="tb-value"><a href="https://www.linkedin.com/in/anthony-russo-898363281/" target="_blank">/in/anthony-russo</a></span></div>
     </div>
   </div>
 
-  <!-- PROJECTS -->
   <div class="section" id="projects">
     <div class="sec-head">
       <span class="sec-tag">A</span>
@@ -302,7 +106,6 @@
       <span class="sec-line"></span>
     </div>
 
-    <!-- RC Plane -->
     <div class="sheet">
       <div class="sheet-top">
         <h3 class="sheet-title">RC Airplane — Independent Design Build</h3>
@@ -314,18 +117,15 @@
         First flight didn't go well — slack in the servo-to-control-surface linkages meant mid-flight corrections weren't translating properly, which led to some crash landings. Diagnosing that is what's driving the V2 redesign now: tighter linkages, better servo mounting.
       </p>
       <div class="tool-row">
-        <span class="tool">XFLR5</span>
-        <span class="tool">SolidWorks</span>
-        <span class="tool">Flow Simulation</span>
-        <span class="tool">Foam Board Fabrication</span>
+        <span class="tool">XFLR5</span><span class="tool">SolidWorks</span><span class="tool">Flow Simulation</span><span class="tool">Foam Board Fabrication</span>
       </div>
-      <div class="media-slot">
-        <span class="big">＋</span>
-        <span>ADD PHOTO — finished plane, CAD screenshot,<br>or XFLR5 airfoil plot here</span>
+      <div class="media-grid">
+        <img src="images/CadPic.png">
+        <img src="images/FinalDesignImage.jpeg">
+        <img src="images/FlowSimPic.png">
       </div>
     </div>
 
-    <!-- Shot put circle -->
     <div class="sheet">
       <div class="sheet-top">
         <h3 class="sheet-title">Dovetail-Joint Shot Put Circle</h3>
@@ -336,65 +136,44 @@
         A personal project merging my background in varsity shot put and discus with mechanical design. Designed a dovetail-jointed circle in SolidWorks, then iterated the design several times around material availability and a fixed budget before fabricating it by hand from OSB and plywood. No prior tolerancing experience going in — cut the joint oversized and hand-filed it down to a snug fit, which turned into a real lesson in fit-and-finish that a drawing alone doesn't teach you.
       </p>
       <div class="tool-row">
-        <span class="tool">SolidWorks</span>
-        <span class="tool">Hand Tools</span>
-        <span class="tool">Iterative Fit / Tolerancing</span>
+        <span class="tool">SolidWorks</span><span class="tool">Hand Tools</span><span class="tool">Iterative Fit / Tolerancing</span>
       </div>
-      <div class="media-slot">
-        <span class="big">＋</span>
-        <span>ADD PHOTO — CAD model next to the<br>physical dovetail fit</span>
+      <div class="media-grid">
+        <div class="media-slot"><span class="big">＋</span><span>CAD model</span></div>
+        <div class="media-slot"><span class="big">＋</span><span>Dovetail joint close-up</span></div>
+        <div class="media-slot"><span class="big">＋</span><span>Finished circle photo</span></div>
       </div>
     </div>
 
-    <!-- BUV -->
     <div class="sheet">
       <div class="sheet-top">
         <h3 class="sheet-title">BUV Crimper — Collaboratory Team</h3>
-        <span class="rev-tag">ONGOING</span>
+        <span class="rev-tag">VOLUNTEER — '25–'26</span>
       </div>
-      <p class="sheet-meta">Messiah University Engineering Collaboratory · Team project</p>
+      <p class="sheet-meta">Messiah University Engineering Collaboratory · Volunteer, 2025–26 (graded team member starting 2026–27)</p>
       <p class="desc">
         Collaborating on a mechanical crimping system mounted to a Basic Utility Vehicle (BUV) for use in Kampala, Uganda. Producing technical drawings for parts manufactured in the school shop, and sourcing budget-conscious local parts — including Toyota Tacoma wheels and square tubing — to hit project cost constraints.
       </p>
       <div class="tool-row">
-        <span class="tool">Technical Drawing</span>
-        <span class="tool">Design for Manufacturing</span>
-        <span class="tool">Sourcing &amp; Budgeting</span>
+        <span class="tool">Technical Drawing</span><span class="tool">Design for Manufacturing</span><span class="tool">Sourcing &amp; Budgeting</span>
       </div>
-      <div class="media-slot">
-        <span class="big">＋</span>
-        <span>ADD PHOTO — technical drawing or<br>build progress shot</span>
+      <div class="media-grid single">
+        <div class="media-slot"><span class="big">＋</span><span>Technical drawing or build progress shot</span></div>
       </div>
     </div>
   </div>
 
-  <!-- BACKGROUND -->
   <div class="section" id="background">
     <div class="sec-head">
       <span class="sec-tag">B</span>
       <h2 class="sec-title">Background</h2>
       <span class="sec-line"></span>
     </div>
-    <div class="strip">
-      <span class="strip-label">Education</span>
-      <span class="strip-value">Messiah University — B.S. Mechanical Engineering, expected May 2028. GPA 3.4/4.0.</span>
-    </div>
-    <div class="strip">
-      <span class="strip-label">Coursework</span>
-      <span class="strip-value">Statics &amp; Dynamics, Materials Engineering, Circuits, Engineering Programming — plus Thermodynamics, Manufacturing Processes, and Mechanical Design in progress this year.</span>
-    </div>
-    <div class="strip">
-      <span class="strip-label">Software</span>
-      <span class="strip-value">SolidWorks, XFLR5, Python, Arduino IDE, Microsoft Excel</span>
-    </div>
-    <div class="strip">
-      <span class="strip-label">Fabrication</span>
-      <span class="strip-value">Hand tools, precision hand-fitting, foam board and sheet-material construction</span>
-    </div>
-    <div class="strip">
-      <span class="strip-label">Activities</span>
-      <span class="strip-value">Varsity Track and Field (Shot Put &amp; Discus) · Engineering Collaboratory</span>
-    </div>
+    <div class="strip"><span class="strip-label">Education</span><span class="strip-value">Messiah University — B.S. Mechanical Engineering, expected May 2028. GPA 3.4/4.0.</span></div>
+    <div class="strip"><span class="strip-label">Coursework</span><span class="strip-value">Statics &amp; Dynamics, Materials Engineering, Circuits, Engineering Programming — plus Thermodynamics, Manufacturing Processes, and Mechanical Design in progress this year.</span></div>
+    <div class="strip"><span class="strip-label">Software</span><span class="strip-value">SolidWorks, XFLR5, Python, Arduino IDE, Microsoft Excel</span></div>
+    <div class="strip"><span class="strip-label">Fabrication</span><span class="strip-value">Hand tools, precision hand-fitting, foam board and sheet-material construction</span></div>
+    <div class="strip"><span class="strip-label">Activities</span><span class="strip-value">Varsity Track and Field (Shot Put &amp; Discus) · Engineering Collaboratory</span></div>
   </div>
 
   <footer>
