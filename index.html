@@ -66,7 +66,9 @@
   /* Media grid + slots — natural aspect ratio, not cropped */
   .media-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;align-items:start;}
   .media-grid.single{grid-template-columns:1fr;max-width:640px;}
+  .media-grid.quad{grid-template-columns:1fr 1fr;}
   .media-slot{border:1.5px dashed var(--line);background:var(--paper);height:260px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--blue-dim);font-family:'IBM Plex Mono', monospace;font-size:12px;text-align:center;padding:16px;}
+  .media-grid.quad .media-slot{height:320px;}
   .media-slot span.big{font-size:26px;}
   .media-grid img, .media-grid video{
     width:100%;
@@ -77,13 +79,17 @@
     border:1px solid var(--line);
     background:var(--paper);
   }
+  .media-grid.quad img, .media-grid.quad video{
+    max-height:480px;
+  }
 
   @media (max-width:900px){
     .media-grid{grid-template-columns:1fr 1fr;}
   }
   @media (max-width:640px){
     .media-grid{grid-template-columns:1fr;}
-    .media-slot{height:220px;}
+    .media-grid.quad{grid-template-columns:1fr;}
+    .media-slot, .media-grid.quad .media-slot{height:220px;}
   }
 
   .strip{background:var(--paper-sheet);border:1px solid var(--line);padding:16px 20px;margin-bottom:10px;display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start;}
@@ -130,10 +136,11 @@
       <div class="tool-row">
         <span class="tool">XFLR5</span><span class="tool">SolidWorks</span><span class="tool">Flow Simulation</span><span class="tool">Foam Board Fabrication</span>
       </div>
-      <div class="media-grid">
+      <div class="media-grid quad">
         <img src="images/CadPic.png" alt="CAD model of RC plane">
         <img src="images/FinalDesignImage.jpeg" alt="Finished RC plane">
         <img src="images/FlowSimPic.png" alt="SolidWorks Flow Simulation">
+        <video src="images/XLFR5GIF.mp4" autoplay loop muted playsinline></video>
       </div>
     </div>
 
@@ -149,10 +156,11 @@
       <div class="tool-row">
         <span class="tool">SolidWorks</span><span class="tool">Hand Tools</span><span class="tool">Iterative Fit / Tolerancing</span>
       </div>
-      <div class="media-grid">
+      <div class="media-grid quad">
         <div class="media-slot"><span class="big">＋</span><span>CAD model</span></div>
         <div class="media-slot"><span class="big">＋</span><span>Dovetail joint close-up</span></div>
         <div class="media-slot"><span class="big">＋</span><span>Finished circle photo</span></div>
+        <div class="media-slot"><span class="big">＋</span><span>Build-in-progress photo</span></div>
       </div>
     </div>
 
